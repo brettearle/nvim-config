@@ -28,6 +28,14 @@ return {
       --   terraform = { "tflint" },
       --   text = { "vale" }
       -- }
+      lint.linters_by_ft = {
+        clojure = { 'clj-kondo' },
+        dockerfile = { 'hadolint' },
+        json = { 'jsonlint' },
+        markdown = { 'vale' },
+        text = { 'vale' },
+        eslint_d = { 'eslint_d' },
+      }
       --
       -- You can disable the default linters by setting their filetypes to nil:
       -- lint.linters_by_ft['clojure'] = nil
